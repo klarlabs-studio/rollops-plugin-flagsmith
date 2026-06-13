@@ -2,7 +2,7 @@ module github.com/klarlabs-studio/rollops-plugin-flagsmith
 
 go 1.26.3
 
-require go.klarlabs.de/rollops v0.6.0
+require go.klarlabs.de/rollops v0.10.0
 
 require (
 	golang.org/x/net v0.55.0 // indirect
