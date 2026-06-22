@@ -16,9 +16,9 @@ func fakeFlagsmith(t *testing.T) *httptest.Server {
 	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		switch {
 		case r.Method == http.MethodGet && strings.Contains(r.URL.Path, "/featurestates"):
-			w.Write([]byte(`{"results":[{"id":2}]}`))
+			_, _ = w.Write([]byte(`{"results":[{"id":2}]}`))
 		case r.Method == http.MethodGet && strings.Contains(r.URL.Path, "/features"):
-			w.Write([]byte(`{"results":[{"id":1,"name":"checkout"}]}`))
+			_, _ = w.Write([]byte(`{"results":[{"id":1,"name":"checkout"}]}`))
 		default:
 			w.WriteHeader(http.StatusOK)
 		}
