@@ -2,6 +2,8 @@ module github.com/klarlabs-studio/rollops-plugin-flagsmith
 
 go 1.26.3
 
+toolchain go1.26.7
+
 require go.klarlabs.de/rollops v0.10.0
 
 require (
